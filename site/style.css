@@ -5,3 +5,4 @@
 .opening blockquote { margin: 0 0 .5rem; font: italic 1.35rem/1.45 Georgia, serif; }
 .opening figcaption { color: #465b52; font-size: .94rem; line-height: 1.6; }
 h1 { font-size: clamp(2.25rem, 5.6vw, 4.5rem); line-height: 1.12; text-wrap: balance; }
+#baseline{margin:3rem 0;max-width:800px}.plot{display:block;width:100%;max-width:720px;height:auto}table{border-collapse:collapse;width:100%;max-width:640px}caption{text-align:left;padding:.65em 0;font-weight:600}th,td{padding:.5em;text-align:left;border-bottom:1px solid #aeb8ae}summary{cursor:pointer;padding:.6em 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65;font:inherit}details{border-bottom:1px solid #d4dbd3}

@@ -16,6 +16,14 @@
 
 [项目主页](https://skills.pixmoving.com/ambition-boundary/) · [下载 v1.1](https://skills.pixmoving.com/ambition-boundary/ambition-boundary-breaker-v1.1.zip) · [阅读 Skill](SKILL.md)
 
+## 基线测试
+
+模型从既有文本中学习，偏好对齐鼓励它回应用户的意图。当用户给出一个沿用过去经验的目标，Agent 会不会也默认接受它？我们做了一次配对测试。
+
+四道题中，直接提问有 3 道提出了新的受益结果或研究问题，加载 Skill 后有 4 道。差异只出现在档案馆题。直接回答计算馆员能否核验 600 张照片，Skill 组还建议让居民按村名检索、参与辨认人物。两组在解释历史限制和使用反馈上都是 4/4。这次观测只发现一组差异，尚不足以判断 AI 普遍缺乏雄心，或估计 Skill 的稳定收益。
+
+[查看图表和逐题回答](https://skills.pixmoving.com/ambition-boundary/#baseline)
+
 ## 试一试
 
 > 我们是两人的维修培训团队，准备翻译十份教材。现在有 Agent，每周还能请两位师傅各给一小时，我们能追求什么更有野心的目标？

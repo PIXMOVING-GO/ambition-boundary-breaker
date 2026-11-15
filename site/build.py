@@ -1,4 +1,5 @@
 """Build the bilingual static site: python3 site/build.py OUTPUT_DIRECTORY."""
+from pilot import section
 import hashlib
 import re
 import shutil
@@ -26,6 +27,7 @@ shutil.copyfile(site / "style.css", out / "style.css")
 digest = hashlib.sha256((out / package).read_bytes()).hexdigest()
 (out / "SHA256SUMS").write_text(f"{digest}  {package}\n")
 
+shutil.copytree(root / "benchmark", out / "benchmark", dirs_exist_ok=True)
 for lang in ("zh-CN", "en"):
     zh = lang == "zh-CN"
     title = "雄心边界突破器" if zh else "Ambition Boundary Breaker"
@@ -35,6 +37,8 @@ for lang in ("zh-CN", "en"):
              if zh else 'Maybe your team was too small. One experiment took three months, and by the time the results came back, there was no time to try again. Ask AI for a timeline today and it may give you a careful estimate based on that same history. But suppose you could run three experiments this quarter, each informed by the last. Which of your reasons for shelving the idea would still hold?')
     lead = ('雄心边界突破器邀请 Agent 和你一起重选目标。带上那个被搁置的想法，让它提出一个你还没敢写下的目标，找出哪项条件已经改变，以及这周能做什么来验证这个判断。'
              if zh else "Ambition Boundary Breaker invites your agent to help choose the goal itself. Bring it a shelved idea. Ask it to propose a goal you haven't dared write down, identify what has changed, and suggest something you can do this week to find out whether it matters.")
+    hypothesis = ("项目始于一个疑问。模型在已有文本上学习，偏好对齐又鼓励它回应用户的意图。当我们带着过去的工期和一个偏小的目标去问，Agent 会不会把这些前提也接过来，替我们把旧计划写得更周全？已有研究观察到部分模型会附和用户的信念。项目建议里的雄心是否也受影响，需要单独测量。"
+                  if zh else "Models learn from existing text, and preference tuning encourages them to follow a user’s intent. If we bring yesterday’s timeline and a modest goal, will an agent quietly accept both and polish the old plan? Research has observed assistants echoing users’ beliefs. Whether that carries over to ambition in project advice is a separate empirical question.")
     prompt = ("我们是两人的维修培训团队，每周有两小时可以请教师傅。除了翻译更多教材，还能让学徒第一次做到什么？"
               if zh else "We are a two-person training team with two hours of expert time each week. What could our apprentices do for the first time if we looked beyond translating more manuals?")
     install = ("解压下载包，将其中的文件夹放入" if zh else "Extract the ZIP and place the enclosed folder in")
@@ -49,9 +53,10 @@ for lang in ("zh-CN", "en"):
 <main>
 <figure class="opening"><blockquote lang="en">“We wanted flying cars, instead we got 140 characters.”</blockquote>
 <figcaption>{'我们想要会飞的汽车，得到的却是 140 个字符。<br>' if zh else ''}<a href="https://longreads.com/2011/07/26/we-wanted-flying-cars-instead-we-got-140-characters/">Founders Fund, 2011</a></figcaption></figure>
-<h1>{question}</h1><p class="lead">{problem}</p><p>{lead}</p>
+<h1>{question}</h1><p class="lead">{problem}</p><p>{hypothesis} <a href="https://arxiv.org/abs/2203.02155">InstructGPT</a> · <a href="https://arxiv.org/abs/2310.13548">{'迎合行为研究' if zh else 'Sycophancy study'}</a></p><p>{lead}</p><p><a href="#baseline">{'查看基线测试 ↓' if zh else 'See the baseline test ↓'}</a></p>
 <a class="action" href="{package}" download>{'下载 Skill' if zh else 'Download skill'} · v{version}</a><a href="{repo}">GitHub ↗</a>
 <section class="panel"><h2>{'从一个问题开始' if zh else 'Try a question'}</h2><p>{prompt}</p></section>
+{section(zh)}
 <section><h2>{'在 Codex 中使用' if zh else 'Use in Codex'}</h2><p>{install} <code>~/.codex/skills/</code>。 {start}</p><code>$ambition-boundary-breaker</code>
 <p><a href="SKILL.md">{'阅读 Skill 原文' if zh else 'Read the skill'}</a> · <a href="SHA256SUMS">SHA-256</a> · <a href="LICENSE">MIT</a></p></section></main>
 <footer><strong>Angelo Yu</strong> · {credit}<p>{collaborator}<br>{role}</p></footer></html>"""

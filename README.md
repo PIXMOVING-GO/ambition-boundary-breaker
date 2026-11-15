@@ -14,6 +14,14 @@ Ambition Boundary Breaker invites your agent to help choose the goal itself. Bri
 
 [Project site](https://skills.pixmoving.com/ambition-boundary/en.html) · [Download v1.1](https://skills.pixmoving.com/ambition-boundary/ambition-boundary-breaker-v1.1.zip) · [Read the skill](SKILL.md)
 
+## Baseline pilot
+
+Why might an agent inherit a modest target? Pretraining draws on historical text, and preference tuning encourages responsiveness to the user. We tested whether an assistant would propose a new goal when the brief already suggested one.
+
+Direct answers proposed a new outcome or research question in 3 of 4 cases; answers with the skill did so in 4. Only the archive case differed. The direct answer estimated whether staff could verify 600 photos. The skill answer also proposed letting residents search by village and help identify people. Both conditions scored 4/4 on constraints and feedback. One differing pair leaves the prevalence of conservative advice and the skill’s repeatable benefit unresolved.
+
+[Chart and paired answers](https://skills.pixmoving.com/ambition-boundary/en.html#baseline)
+
 ## Try it
 
 > We are a two-person training team translating ten repair manuals. With agents and two hours of expert time each week, what goal should we pursue?
