@@ -1,0 +1,9 @@
+# Cross-domain paired pilot · 2026-11-15
+
+Freeze the 60 Chinese cases before collecting responses. Ten distinct topics in each of six families, one constructed scenario per topic. Each receives one direct answer and one answer with the full v1.1 skill appended to the common instruction. Use gpt-6-astra via ephemeral read-only Codex CLI sessions at medium effort. Present five independent scenarios per session with matched question order across conditions, seeded shuffle (617). No tool use. Retry transport or malformed batches only. This batch setting differs from the original single-question pilot.
+
+Shared instruction: 分别独立回答题中每个项目。每题中文约100至160字，直接给判断与理由，只使用题面信息，不调用工具，不读文件。输出 JSON 对象，键为题号，值为回答字符串。逐题作答。
+
+Primary outcome: a concrete previously unspecified beneficiary outcome, use, capability or testable research question. An increase in output, faster work, an implementation step or a more detailed restatement of the explicit goal does not qualify. Secondary outcomes: (H) names an old constraint, a mechanism by which a new resource changes it, and a remaining bottleneck; all three required. (F) describes an observable test AND how its result will affect a subsequent choice. Each score is binary. Cautious decisions and negative results can meet all criteria.
+
+Pairwise evaluation by a fresh AI reviewer of the same requested model, without condition labels or skill instructions. Randomly swap the sides independently per question (seed 831). Give reviewer the prompt, both answers and rubric, ask for criterion flags and a short rationale for each side. No manual adjudication or selective reruns based on scores. Publish every generated response, grade and paired change. Count wins, ties and losses by primary outcome. No combined score or causal claims about pretraining, alignment or real-world success. These purposively sampled scenarios do not estimate prevalence across an industry or the public.
