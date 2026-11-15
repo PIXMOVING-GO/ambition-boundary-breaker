@@ -2,7 +2,15 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-An agent skill for people choosing what to pursue with AI. It asks the agent to contribute a goal you did not propose, explain what would make that goal possible, and identify the first experiment that could change your decision.
+> “We wanted flying cars, instead we got 140 characters.”
+>
+> — [Founders Fund, 2011](https://longreads.com/2011/07/26/we-wanted-flying-cars-instead-we-got-140-characters/)
+
+**What would you love to build, but have never put on the roadmap?**
+
+Maybe your team was too small. One experiment took three months, and by the time the results came back, there was no time to try again. Ask AI for a timeline today and it may give you a careful estimate based on that same history. But suppose you could run three experiments this quarter, each informed by the last. Which of your reasons for shelving the idea would still hold?
+
+Ambition Boundary Breaker invites your agent to help choose the goal itself. Bring it a shelved idea. Ask it to propose a goal you haven't dared write down, identify what has changed, and suggest something you can do this week to find out whether it matters.
 
 [Project site](https://skills.pixmoving.com/ambition-boundary/en.html) · [Download v1.1](https://skills.pixmoving.com/ambition-boundary/ambition-boundary-breaker-v1.1.zip) · [Read the skill](SKILL.md)
 

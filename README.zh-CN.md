@@ -2,7 +2,17 @@
 
 [English](README.md) · **简体中文**
 
-当你和 AI 一起决定要做什么，邀请 Agent 主动提出一个你还没想到的目标，说清今天有哪些条件让它值得追求，再找出一个能改变下一步决策的实验。
+> “We wanted flying cars, instead we got 140 characters.”
+>
+> — [Founders Fund, 2011](https://longreads.com/2011/07/26/we-wanted-flying-cars-instead-we-got-140-characters/)
+
+我们想要会飞的汽车，得到的却是 140 个字符。
+
+**你有没有一个很想做，却从没认真写进计划的项目？**
+
+也许当初放下它，是因为团队太小，一次实验要等三个月，等结果回来，已经没有时间再试。今天再问 AI，它可能会沿着这段历史，给你一份同样谨慎的时间表。可如果你现在能在同一个季度里根据上一轮结果连做三轮实验，当初让你放弃的理由，还剩下几个？
+
+雄心边界突破器邀请 Agent 和你一起重选目标。带上那个被搁置的想法，让它提出一个你还没敢写下的目标，找出哪项条件已经改变，以及这周能做什么来验证这个判断。
 
 [项目主页](https://skills.pixmoving.com/ambition-boundary/) · [下载 v1.1](https://skills.pixmoving.com/ambition-boundary/ambition-boundary-breaker-v1.1.zip) · [阅读 Skill](SKILL.md)
 
