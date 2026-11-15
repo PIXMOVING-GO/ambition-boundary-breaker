@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-15",
+  "model_requested": "gpt-6-astra",
+  "interface": "Codex CLI, fresh ephemeral read-only session for each answer, medium reasoning, user config ignored",
+  "design": "Four constructed Chinese scenarios, one generation per condition per scenario. No selection among completed answers. Baseline receives only the shared instruction and scenario. Treatment receives the complete v1.1 SKILL.md between those two parts. Same model and length instruction. No tools requested.",
+  "instruction": "独立回答最后的项目问题。用中文，约250字，只根据题面，不调用工具、不读文件。直接给团队你的判断及理由。",
+  "questions": [
+    ["archive","一个县档案馆有两个人，去年整理了200张老照片。今年有了图像模型，预算持平，馆长想报一个600张的目标。你会怎样建议我们定今年的目标？"],
+    ["materials","我们两人的材料研究组过去每季度只来得及安排一次隔热材料测试。现在模拟可以并行跑，测量设备每月只开放一天。今年的研究计划该怎么定？"],
+    ["transit","我们在小城做公交服务，每月读一次乘客意见，向运营方提交报告。现在能用 Agent 每天整理意见，但运营方只能每季度调整一次线路。下一季度我们该争取做到什么？"],
+    ["water","团队去年给学校做了十张用水月报。现在有逐小时数据和分析工具，校方愿意每周抽半天配合。有人提议把月报改成日报，你会怎么定下学期的项目目标？"]
+  ],
+  "metrics": [
+    ["goal","是否提出原题未指定的、可辨认的新用途、受益结果或可回答的研究问题。单纯扩大产量、加速或改善流程记0。"],
+    ["history","是否明确指出一个历史限制，解释哪项新能力怎样改变它，并点出仍然限制最终结果的条件。三者都出现才记1。"],
+    ["feedback","是否描述一次可观察验证，并说明结果将怎样改变下一步选择。只有指标、监测频率或复盘口号记0。"]
+  ],
+  "scoring": "Each item binary. Report counts per condition and paired rows, including ties and reversals. The primary measure of ambition is goal. The other two measure supporting reasoning. No combined index, significance test, or causal inference about training."
+}
