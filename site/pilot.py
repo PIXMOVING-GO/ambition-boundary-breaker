@@ -27,7 +27,7 @@ def section(zh):
             if zh else "Four constructed Chinese prompts, one generation per prompt and condition. Codex CLI requested gpt-6-astra with medium reasoning. One project-side AI reviewer scored shuffled answers against the prespecified criteria before revealing conditions. The three values in each cell follow the order below; 1 means the criterion was met.")
     limits = ("样本只覆盖一种模型和四个情境。题目主动邀请模型给建议，指标也贴近 Skill 的设计。实际项目成效、不同模型的普遍倾向，以及预训练或对齐的因果作用均待检验。"
               if zh else "One model, four scenarios. The questions invite advice and the rubric reflects the skill’s design. Real project outcomes, generalization across models and the causal roles of pretraining and alignment remain open.")
-    return f'''<section id="baseline"><h2>{'模型会主动改写目标吗？' if zh else 'Does the model propose a different goal?'}</h2>
+    return f'''<section id="pilot"><h2>{'模型会主动改写目标吗？' if zh else 'Does the model propose a different goal?'}</h2>
 <p>{summary}</p><img class="plot" src="benchmark/chart-{lang}.svg" alt="{escape(summary)}"><p>{note}</p>
 <table><caption>{" · ".join(labels)}</caption><thead><tr><th>{'情境' if zh else 'Scenario'}</th><th>{conditions[0]}</th><th>{conditions[1]}</th></tr></thead><tbody>{"".join(table)}</tbody></table>
 <p>{limits}</p><p><a href="benchmark/protocol.json">{'题目与判分规则' if zh else 'Prompts and rubric'}</a> · <a href="benchmark/results.json">{'原始回答与逐项评分（JSON）' if zh else 'Answers and scores (JSON)'}</a></p>

@@ -1,5 +1,6 @@
 """Build the bilingual static site: python3 site/build.py OUTPUT_DIRECTORY."""
 from pilot import section
+from broad import report
 import hashlib
 import re
 import shutil
@@ -56,7 +57,8 @@ for lang in ("zh-CN", "en"):
 <h1>{question}</h1><p class="lead">{problem}</p><p>{hypothesis} <a href="https://arxiv.org/abs/2203.02155">InstructGPT</a> · <a href="https://arxiv.org/abs/2310.13548">{'迎合行为研究' if zh else 'Sycophancy study'}</a></p><p>{lead}</p><p><a href="#baseline">{'查看基线测试 ↓' if zh else 'See the baseline test ↓'}</a></p>
 <a class="action" href="{package}" download>{'下载 Skill' if zh else 'Download skill'} · v{version}</a><a href="{repo}">GitHub ↗</a>
 <section class="panel"><h2>{'从一个问题开始' if zh else 'Try a question'}</h2><p>{prompt}</p></section>
-{section(zh)}
+{report(zh, out)}
+<details><summary>{'早期四题试测' if zh else 'Original four-case pilot'}</summary>{section(zh)}</details>
 <section><h2>{'在 Codex 中使用' if zh else 'Use in Codex'}</h2><p>{install} <code>~/.codex/skills/</code>。 {start}</p><code>$ambition-boundary-breaker</code>
 <p><a href="SKILL.md">{'阅读 Skill 原文' if zh else 'Read the skill'}</a> · <a href="SHA256SUMS">SHA-256</a> · <a href="LICENSE">MIT</a></p></section></main>
 <footer><strong>Angelo Yu</strong> · {credit}<p>{collaborator}<br>{role}</p></footer></html>"""

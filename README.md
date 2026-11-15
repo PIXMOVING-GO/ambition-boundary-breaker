@@ -18,9 +18,9 @@ Ambition Boundary Breaker invites your agent to help choose the goal itself. Bri
 
 Why might an agent inherit a modest target? Pretraining draws on historical text, and preference tuning encourages responsiveness to the user. We tested whether an assistant would propose a new goal when the brief already suggested one.
 
-Direct answers proposed a new outcome or research question in 3 of 4 cases; answers with the skill did so in 4. Only the archive case differed. The direct answer estimated whether staff could verify 600 photos. The skill answer also proposed letting residents search by village and help identify people. Both conditions scored 4/4 on constraints and feedback. One differing pair leaves the prevalence of conservative advice and the skill’s repeatable benefit unresolved.
+We compared direct answers with v1.1 on 60 constructed Chinese prompts, ten topics in each of six families. Direct answers proposed a new goal in 53/60 cases; answers with the skill did so in 59/60. The skill alone met this criterion in 6 pairs, both sides tied in 54, and the direct answer alone met it in 0. Each condition was sampled once and graded by the same model with labels masked. Real project outcomes were not measured.
 
-[Chart and paired answers](https://skills.pixmoving.com/ambition-boundary/en.html#baseline)
+[Domain charts, 120 answers and judgments](https://skills.pixmoving.com/ambition-boundary/en.html#baseline)
 
 ## Try it
 
